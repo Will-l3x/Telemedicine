@@ -11,7 +11,7 @@ var helmet = require('helmet')
 
 dotenv.config({path: './config/config.env'});
 
-
+const routes = require('./routes/routes')
 
 connectDB();
 const app = express();
@@ -22,7 +22,7 @@ app.use(passport.session());
 app.use(express.json());
 
 
-
+app.use('/api', routes);
 
 
 

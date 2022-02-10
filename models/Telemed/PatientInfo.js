@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const PatientScheme = new mongoose.Schema({
     Surname:{
         Type: String,
+        required: [true, 'Please enter your surname to proceed'],
         trim: true,
-        required: [true, 'Please enter your surname to proceed']
     },
     FirstName:{
         Type: String,
@@ -29,13 +29,23 @@ const PatientScheme = new mongoose.Schema({
         required: [true, 'please select a time on the date for the appointment'],
        
     },
-    ChooseTime: {
+    ServiceType: {
         type: String,
         trim: true, 
         required: [true, 'please select a service you are looking for'],
        
     },
-   
+    Notes: {
+        type: String,
+        trim: true, 
+        
+       
+    },
+    Location:{
+        type: String,
+        trim: true, 
+        required: [true, 'please select the location you are at'],
+    }
 
 })
 
