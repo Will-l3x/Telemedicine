@@ -2,7 +2,7 @@
   "name": "telemed",
   "version": "1.0.0",
   "description": "Telemedicine System",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server"
